@@ -6,5 +6,5 @@ class MyAppRouterConstants {
   static const String categoryRouteName = 'category';
   static const String companyRouteName = 'company';
 
-
+//name eta haleko hai
 }
