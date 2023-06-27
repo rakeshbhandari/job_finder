@@ -17,7 +17,7 @@ class PageFirst extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           padding: const EdgeInsets.all(0),
-          children: const [
+          children: [
             DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.deepOrangeAccent,
@@ -47,7 +47,7 @@ class PageFirst extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.type_specimen_sharp),
-              onTap: null,
+              onTap: () => context.go('/categorypage'),
               title: Text(' Categories '),
             ),
             ListTile(
@@ -108,7 +108,7 @@ class PageFirst extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
@@ -119,7 +119,7 @@ class PageFirst extends StatelessWidget {
                   width: 180,
                 ),
                 TextButton(
-                  onPressed: null,
+                  onPressed: () => context.push('/categorypage'),
                   child: Text('see all',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -221,10 +221,7 @@ class PageFirst extends StatelessWidget {
                         const Text('\$35000 - \$85000 a year'),
                         const SizedBox(width: 150),
                         ElevatedButton(
-                          onPressed: () {
-                            GoRouter.of(context)
-                                .pushNamed(MyAppRouterConstants.jobsRouteName);
-                          },
+                          onPressed: () => context.go('/jobpage'),
                           child: const Text('Apply'),
                         ),
                       ],
@@ -233,7 +230,7 @@ class PageFirst extends StatelessWidget {
                 )),
             const SizedBox(height: 10),
             //card jobs
-            const Card(
+            Card(
                 clipBehavior: Clip.hardEdge,
                 elevation: 10,
                 child: Column(
@@ -275,7 +272,7 @@ class PageFirst extends StatelessWidget {
                         Text('\$35000 - \$85000 a year'),
                         SizedBox(width: 150),
                         ElevatedButton(
-                          onPressed: null,
+                          onPressed: () => context.push('/categorypage'),
                           child: Text('Apply'),
                         ),
                       ],
