@@ -235,7 +235,7 @@ class PageFirst extends StatelessWidget {
                 elevation: 10,
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Icon(
                           Icons.pie_chart,
@@ -258,22 +258,22 @@ class PageFirst extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10),
-                    Column(
+                    const SizedBox(height: 10),
+                    const Column(
                       children: [
                         Text(
                             'It is a long established fact that a reader be distracted by content of page when looking at its layout.'),
                       ],
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text('\$35000 - \$85000 a year'),
-                        SizedBox(width: 150),
+                        const Text('\$35000 - \$85000 a year'),
+                        const SizedBox(width: 150),
                         ElevatedButton(
                           onPressed: () => context.push('/categorypage'),
-                          child: Text('Apply'),
+                          child: const Text('Apply'),
                         ),
                       ],
                     ),
