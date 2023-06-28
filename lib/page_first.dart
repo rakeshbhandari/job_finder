@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:test_apk_001/pages/category_page.dart';
+import 'package:test_apk_001/pages/jobs_page.dart';
 // import 'package:test_apk_001/pages/company_page.dart';
 // import 'package:test_apk_001/routes/app_routes_consts.dart';
 
@@ -49,7 +50,9 @@ class PageFirst extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.type_specimen_sharp),
-              onTap: () => context.go('/categorypage'),
+              onTap: () {
+                Get.to(() => const CategoryPage());
+              },
               title: Text(' Categories '),
             ),
             ListTile(
@@ -121,7 +124,9 @@ class PageFirst extends StatelessWidget {
                   width: 180,
                 ),
                 TextButton(
-                  onPressed: () => context.push('/categorypage'),
+                  onPressed: () {
+                    Get.to(() => const CategoryPage());
+                  },
                   child: Text('see all',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -156,7 +161,7 @@ class PageFirst extends StatelessWidget {
 
             const SizedBox(height: 10),
             //jobs section suru
-            const Column(
+            Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -170,7 +175,9 @@ class PageFirst extends StatelessWidget {
                       width: 180,
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        Get.to(() => const JobsPage());
+                      },
                       child: Text('see all',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -200,7 +207,7 @@ class PageFirst extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
                             ),
-                            Text('Gobook Tech.Los Angeles')
+                            Text('ChromeLab ,Biratnagar')
                           ],
                         ),
                         SizedBox(width: 140),
@@ -213,18 +220,30 @@ class PageFirst extends StatelessWidget {
                     const Column(
                       children: [
                         Text(
-                            'It is a long established fact that a reader be distracted by content of page when looking at its layout'),
+                            'Requirement for 10 Angular Developer with 5+ work experience.'),
                       ],
                     ),
                     const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        const Text('\$35000 - \$85000 a year'),
+                        const Text('\$50000 - \$90000 a year'),
                         const SizedBox(width: 150),
                         ElevatedButton(
-                          onPressed: () => context.go('/jobpage'),
-                          child: const Text('Apply'),
+                          onPressed: () {
+                            Get.snackbar(
+                              "Urgently Required", // title
+                              "We are looking for a urgent angular developer . Hiring immediately  interns. Thank you!", // message
+                              icon: Icon(Icons.info_sharp),
+                              shouldIconPulse: true,
+                              onTap: null,
+                              barBlur: 4000,
+                              isDismissible: true,
+                              duration: Duration(seconds: 4),
+                              snackStyle: SnackStyle.FLOATING,
+                            );
+                          },
+                          child: const Text('Details'),
                         ),
                       ],
                     )
@@ -274,8 +293,19 @@ class PageFirst extends StatelessWidget {
                         const Text('\$35000 - \$85000 a year'),
                         const SizedBox(width: 150),
                         ElevatedButton(
-                          onPressed: () => context.push('/categorypage'),
-                          child: const Text('Apply'),
+                          onPressed: () {
+                            Get.snackbar(
+                              "Urgently Required", // title
+                              "We are looking for a urgent flutter developer . Hiring immediately  interns. Thank you!", // message
+                              icon: Icon(Icons.alarm),
+                              shouldIconPulse: true,
+                              onTap: null,
+                              barBlur: 1000,
+                              isDismissible: true,
+                              duration: Duration(seconds: 4),
+                            );
+                          },
+                          child: const Text('Details'),
                         ),
                       ],
                     ),
@@ -326,7 +356,16 @@ class PageFirst extends StatelessWidget {
             const SizedBox(height: 100),
             ElevatedButton(
                 onPressed: () {
-                  Get.to(() => const CategoryPage());
+                  Get.snackbar(
+                    "Hey i'm a Get SnackBar!", // title
+                    "It's unbelievable! I'm using SnackBar without context, without boilerplate, without Scaffold, it is something truly amazing!", // message
+                    icon: Icon(Icons.alarm),
+                    shouldIconPulse: true,
+                    onTap: null,
+                    barBlur: 30,
+                    isDismissible: true,
+                    duration: Duration(seconds: 4),
+                  );
                 },
                 child: const Text("test")),
             const SizedBox(height: 100),
