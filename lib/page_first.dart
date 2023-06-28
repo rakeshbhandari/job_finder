@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
+import 'package:test_apk_001/pages/category_page.dart';
 // import 'package:test_apk_001/pages/company_page.dart';
-import 'package:test_apk_001/routes/app_routes_consts.dart';
+// import 'package:test_apk_001/routes/app_routes_consts.dart';
 
 // import 'pages/category_page.dart';
 // import 'widgets/cardWidget.dart';
@@ -324,7 +326,7 @@ class PageFirst extends StatelessWidget {
             const SizedBox(height: 100),
             ElevatedButton(
                 onPressed: () {
-                  context.push("/jobspage");
+                  Get.to(() => const CategoryPage());
                 },
                 child: const Text("test")),
             const SizedBox(height: 100),
