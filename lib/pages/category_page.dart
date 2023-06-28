@@ -4,12 +4,14 @@ class CategoryPage extends StatelessWidget {
   const CategoryPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => const Scaffold(
-        body: Center(
+  Widget build(BuildContext context) =>  Scaffold(
+    appBar: AppBar(
+      title: Text('Category'),
+      
+    ),
+        body: Container(
           child: Column(
-            children: [
-              Text('Category Page'),
-            ],
+            
           ),
         ),
       );

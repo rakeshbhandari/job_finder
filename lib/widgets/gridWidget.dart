@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget gridWidget() {
   return Container(
-    padding: EdgeInsets.all(4.0),
+    padding: const EdgeInsets.all(4.0),
     child: const Column(
       children: [
         Icon(Icons.build),
